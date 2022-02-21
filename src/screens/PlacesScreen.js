@@ -4,15 +4,17 @@ import Pagination from '../components/Pagination'
 import PlaceCard from '../components/PlaceCard'
 
 const Places = () => {
-  const lugares = [1, 2, 3, 4, 5]
+  const lugares = [1, 2, 3, 4, 5, 6, 7, 8]
   return (
     <div>
       <Banner />
-      <div className="flex flex-wrap -mx-2 overflow-hidden sm:-mx-2 md:-mx-3 lg:-mx-4 xl:-mx-4 p-6 lg:p-20 bg-gray-50">
+      <br></br>
+      <div className="grid grid-cols-1 p-2 lg:p-12 md:grid-cols-2 xl:grid-cols-5 gap-12 bg-gray-200">
         {lugares.map((el) => (
-          <PlaceCard />
+          <PlaceCard id={el} />
         ))}
       </div>
+      <br></br>
       <Pagination />
     </div>
   )
