@@ -4,7 +4,7 @@ import Pagination from '../components/Pagination'
 import PlaceCard from '../components/PlaceCard'
 
 const Places = () => {
-  const lugares = [1, 2, 3, 4, 5, 6, 7, 8]
+  const lugares = [1, 2, 3, 4]
   return (
     <div>
       <Banner />
