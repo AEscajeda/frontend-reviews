@@ -10,7 +10,7 @@ const PlaceCard = ({ id }) => {
       Categoria: 'Hamburguesas',
       Slogan: 'Vence tu hambre',
       Rango: '$60 - $75',
-      Rating: '4.5',
+      Rating: '4.0',
       Descripcion:
         'Somos un restaurante de comida rápida con un ambiente familiar y cálido, desde el año 2000 ofrecemos servicio de restaurante, servicio rápido y servicio a domicilio. Con el trabajo diario y perseverancia nos posicionamos en el gusto y preferencia de nuestros clientes logrando así crecer de una forma significativa desde ampliar los servicios, remodelar el lugar, contratar más personal hasta el poder ofrecer un servicio a domicilio.',
       Direccion: '9 poniente #2512, Puebla',
@@ -22,7 +22,7 @@ const PlaceCard = ({ id }) => {
       Categoria: 'Oriental',
       Slogan: `LET’S PUT THINGS STRAIGHT`,
       Rango: '$70 - $85',
-      Rating: '4.3',
+      Rating: '3.5',
       Descripcion:
         'Rock n Wok es comida oriental y comida china hecha a nuestra manera, que inicia en el año 2010 con la firme convicción de evolucionar y trabajar para trascender juntos. Durante 10 años Rock & Wok ha buscado ofrecer un modelo de restaurante donde todas las personas están organizadas y aman su trabajo. En todo lo que hacemos, buscamos expresar nuestra personalidad y crear algo que nos haga sentir orgullosos. Queremos crecer y llegar más lejos.',
       Direccion: 'Av. 13 Pte. 2101, Barrio de Santiago, 72410 Puebla, Pue.',
@@ -34,7 +34,7 @@ const PlaceCard = ({ id }) => {
       Categoria: 'Desayunos',
       Slogan: `Como si estuvieras en tu casa`,
       Rango: '$45 - $60',
-      Rating: '4.2',
+      Rating: '0',
       Descripcion:
         'La comida de antaño debe degustarse en familia, en ambientes cálidos y hogareños, por eso en Los Almuerzos ofrecemos un servicio personalizado, acogedor, brindado por jóvenes que nos hacen sentir en casa...',
       Direccion:
@@ -47,7 +47,7 @@ const PlaceCard = ({ id }) => {
       Categoria: 'Desayunos',
       Slogan: `Date ese capricho que tiene en mente`,
       Rango: '$65 - $90',
-      Rating: '4.6',
+      Rating: '4.0',
       Descripcion:
         'Somos una cocina dedicada especialmente a desayunos, nos distinguimos por la calidad de nuestros ingredientes y por consentir y llevar alegría a todos los estudiantes que buscan comer algo diferente y con un toque unico',
       Direccion: 'Av. 13 Pte. 1917, Barrio de Santiago, 72090 Puebla, Pue.',

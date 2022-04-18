@@ -61,7 +61,77 @@ const PlaceScreen = () => {
     },
   ]
 
+  const allReviews = [
+    {
+      id: '1',
+      Nombre: 'José Rangel P',
+      Calificacion: '5.0',
+      Review:
+        'Buen lugar! No habia mucha gente, por ende, el servicio fue rápido. Higiene aceptable. Al personal le falta atender con más amabilidad. De ahí en fuera, todo bien!',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '1',
+      Nombre: 'Alberto Tello',
+      Calificacion: '3.0',
+      Review:
+        'Había mucha gente, atendieron muy rápido, las promos no las tenían disponibles, los baños un poco sucios pero se entiende por la cantidad de gente que había, pero si le hace falta una remodelación al lugar.',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '1',
+      Nombre: 'Celeste Dulce',
+      Calificacion: '4.0',
+      Review:
+        'Servicio rápido de postres en la entrada del establecimiento, por lo general está limpio, aunque ya luce un poco retro. La comida pues regular, uno ya sabe que esperar en establecimientos de comida rápida, igual el servicio es regular.',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '2',
+      Nombre: 'Oscar Gomez',
+      Calificacion: '5.0',
+      Review:
+        '¡Delicioso y muy muy recomendable! Los precios parecerían altos pero su comida, sabor y calidad compensan mucho ese aspecto. Los recomendaría sin dudarlo.',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '2',
+      Nombre: 'Abraham Bahena García',
+      Calificacion: '2.0',
+      Review:
+        'No me dieron mis bebidas en tiempo y forma así como un kraby roll que me entregaron hasta el momento en el que fui a pedirlo (ya estaba frío por la demora) Las dos estrellas son porque al menos sabia rica la comida.',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '4',
+      Nombre: 'Hiram Avalos',
+      Calificacion: '4.0',
+      Review:
+        'La atención es muy buena , el servicio es un poco lento. Recomiendo llegar antes de las 11:15 para no esperar tanto tiempo.',
+      Fecha: '08 de abril 2022',
+    },
+    {
+      id: '4',
+      Nombre: 'Araceli Ramos',
+      Calificacion: '4.0',
+      Review:
+        'La comida tiene un sabor muy casero es un lugar muy llenó pero avanzas muy rápido la atención es muy buena todos son muy accesibles y son precios populares. Siempre regresaría.',
+      Fecha: '08 de abril 2022',
+    },
+  ]
+
   const lugar = places.filter((place) => place.id == id)
+  const review = allReviews.filter((place) => place.id == id)
+  let cal = []
+  const promedio = review.map((review) => cal.push(review.Calificacion))
+
+  const stars = (cal) => {
+    let acc = 0
+    for (let i = 0; i < cal.length; i++) {
+      acc += Number(cal[i])
+    }
+    return acc / cal.length
+  }
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -81,8 +151,10 @@ const PlaceScreen = () => {
             </h1>
             <div className="flex mb-4">
               <span className="flex items-center">
-                <Rating value={lugar[0]['Rating']} color={'#fee568'} />
-                <span className="text-gray-600 ml-3">4 Reviews</span>
+                <Rating value={stars(cal)} color={'#fee568'} />
+                <span className="text-gray-600 ml-3">
+                  {review.length} Reviews
+                </span>
               </span>
               <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                 <a className="text-gray-500">
@@ -151,17 +223,12 @@ const PlaceScreen = () => {
               class="inline-block mb-14 text-3xl font-heading font-medium underline hover:text-darkBlueGray-700"
               href="#"
             >
-              4 reviews
+              {review.length} reviews
             </a>
-            {reviews.map((review) => (
-              <ReviewCard key={review} review={''} />
+            {review.map((review) => (
+              <ReviewCard key={review} review={review} />
             ))}
             <br></br>
-            <div class="text-center">
-              <button class="inline-block w-full md:w-auto h-full py-4 px-10 leading-8 font-heading font-medium tracking-tighter text-xl text-white bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl">
-                Ver todas
-              </button>
-            </div>
           </div>
         </section>
       </div>
